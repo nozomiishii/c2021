@@ -1,5 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+interface S {
+  colorBeam: boolean;
+}
+
+const init = {
+  colorBeam: false,
+};
 export const Home: React.FC = () => {
-  return <div>Home</div>;
+  const [state, setState] = useState<S>(init);
+  return (
+    <div>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div>Nozomi ishii</div>
+        <div></div>
+      </div>
+    </div>
+  );
 };
