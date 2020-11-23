@@ -69,6 +69,16 @@ const border = ({ borderColor = Neumorphism.SHADOW }) => {
   `;
 };
 
+const toggleBorder = ({ inset = false, borderColor = Neumorphism.SHADOW }) => {
+  return inset
+    ? css`
+        border: 1px solid ${Color.GREEN};
+      `
+    : css`
+        border: 1px solid ${borderColor};
+      `;
+};
+
 export const NeuDiv = styled.div<P>`
   background: ${Neumorphism.BASE};
   border-radius: 3px;
@@ -114,7 +124,7 @@ export const NeuNav = styled(Link)<P>`
   font-weight: bold;
   width: 120px;
   margin-bottom: 20px;
-  ${border}
+  ${toggleBorder}
   ${highBoxShadow}
   &:hover {
     border: 1px solid ${Color.GREEN};
