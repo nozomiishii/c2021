@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled, { createGlobalStyle, css } from 'styled-components';
 
 export enum Color {
@@ -14,12 +15,16 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     list-style:none;
+    user-select: none;
+    color: ${Color.DARK_FONT};
   }
 	body{
 		min-height: 100vh;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* font-family: 'Rubik Mono One', sans-serif; */
     /* font-family: 'Kosugi Maru', sans-serif; */
     background-color:${Color.BG_COLOR};
-    color: ${Color.DARK_FONT};
+
 	}
 `;
 
@@ -61,9 +66,61 @@ const border = ({ borderColor = Neumorphism.SHADOW }) => {
 
 export const NeuDiv = styled.div<P>`
   background: ${Neumorphism.BASE};
-  border-radius: 15px;
+  border-radius: 3px;
   ${border}
   ${boxShadow}
+`;
+
+export const NeuCanvas = styled.div<P>`
+  background: ${Neumorphism.BASE};
+  border-radius: 3px;
+  ${border}
+  ${boxShadow}
+  canvas {
+    border-radius: 3px;
+  }
+`;
+
+export const NeuLogo = styled(Link)<P>`
+  background: ${Neumorphism.BASE};
+  width: 320px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  ${border}
+  ${highBoxShadow}
+  &:hover {
+    border: 1px solid ${Color.GREEN};
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+    box-shadow: inset 8px 8px 10px ${Neumorphism.SHADOW}, inset -12px -12px 28px ${Neumorphism.LIGHT};
+  }
+`;
+
+export const NeuNav = styled(Link)<P>`
+  background: ${Neumorphism.BASE};
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-left: 8px;
+  font-weight: bold;
+  width: 120px;
+  margin-bottom: 20px;
+  ${border}
+  ${highBoxShadow}
+  &:hover {
+    border: 1px solid ${Color.GREEN};
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+    box-shadow: inset 8px 8px 10px ${Neumorphism.SHADOW}, inset -12px -12px 28px ${Neumorphism.LIGHT};
+  }
 `;
 
 export const NeuButton = styled.button<P>`
@@ -74,13 +131,25 @@ export const NeuButton = styled.button<P>`
   border-width:2px;
   ${boxShadow}
   &:focus {
-    border: none;
     outline: none;
   }
   &:active {
-    border: none;
     outline: none;
     box-shadow: inset 8px 8px 10px ${Neumorphism.SHADOW}, inset -12px -12px 28px ${Neumorphism.LIGHT};
+  }
+`;
+
+export const IconButton = styled(NeuButton)`
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 24px;
+  }
+  &:hover {
+    border: 1px solid ${Color.GREEN};
   }
 `;
 
