@@ -12,10 +12,12 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style:none;
   }
 	body{
 		min-height: 100vh;
-    font-family: 'Kosugi Maru', sans-serif;
+    /* font-family: 'Kosugi Maru', sans-serif; */
     background-color:${Color.BG_COLOR};
     color: ${Color.DARK_FONT};
 	}

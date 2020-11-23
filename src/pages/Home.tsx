@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Layout } from '../components';
 
 interface S {
   colorBeam: boolean;
@@ -9,12 +11,5 @@ const init = {
 };
 export const Home: React.FC = () => {
   const [state, setState] = useState<S>(init);
-  return (
-    <div>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <div>Nozomi ishii</div>
-        <div></div>
-      </div>
-    </div>
-  );
+  return <Layout>home</Layout>;
 };
