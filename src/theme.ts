@@ -28,6 +28,11 @@ export const GlobalStyle = createGlobalStyle`
 	}
 `;
 
+export const layoutPadding = 60;
+export const flamePadding = 4;
+export const canvasWidth = window.innerWidth - layoutPadding * 2 - flamePadding * 2;
+export const canvasHeight = window.innerHeight * 0.7;
+
 export const Neumorphism = {
   BASE: Color.BG_COLOR,
   LIGHT: '#FCFEFF',
