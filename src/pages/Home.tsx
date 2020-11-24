@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
 
   return (
     <Layout>
-      <NeuCanvas inset style={{ display: 'flex', justifyContent: 'center', padding: flamePadding }}>
+      <NeuCanvas inset style={{ display: 'flex', justifyContent: 'center', padding: flamePadding, paddingBottom: 0 }}>
         <ColorBeam height={canvasHeight} width={canvasWidth} />
         {/* <Box height={canvasHeight} width={canvasWidth} /> */}
       </NeuCanvas>
