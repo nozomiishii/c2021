@@ -116,7 +116,7 @@ export const NeuLogo = styled(Link)<P>`
   }
 `;
 
-export const NeuNav = styled(Link)<P>`
+export const NeuNav = styled.div<P>`
   background: ${Neumorphism.BASE};
   border-radius: 8px;
   padding: 10px 20px;

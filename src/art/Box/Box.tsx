@@ -1,6 +1,7 @@
 import p5 from 'p5';
 import React from 'react';
 import Sketch from 'react-p5';
+import logo from './logo.png';
 
 interface P {
   width: number;
@@ -12,7 +13,7 @@ export const Box: React.FC<P> = ({ height, width }) => {
   let image: p5.Image;
 
   const preload = (p: p5) => {
-    image = p.loadImage('https://picsum.photos/400/600?random=1');
+    image = p.loadImage(logo);
   };
   const windowResized = (p: p5) => {
     p.resizeCanvas(width, height);
@@ -28,7 +29,7 @@ export const Box: React.FC<P> = ({ height, width }) => {
     v.div(100);
     p.directionalLight(255, 255, 255, v);
 
-    p.background(0);
+    p.background(12);
     p.noStroke();
 
     p.push();

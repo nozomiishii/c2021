@@ -5,7 +5,6 @@ import { IconButton, NeuDiv, NeuLogo, NeuNav } from '../../../theme';
 export const Layout: React.FC = ({ children }) => {
   let { pathname } = useLocation();
   // let param = useParams<any>();
-  console.log('🚀 ~ file: Layout.tsx ~ line 10 ~ param', pathname);
   // useEffect(() => {
   //   console.log('id', id);
   // }, );
@@ -25,16 +24,15 @@ export const Layout: React.FC = ({ children }) => {
         <NeuLogo to="/">
           <h1 style={{ fontFamily: 'Rubik Mono One', fontSize: 38, overflow: 'none' }}>🦄NOZOMI</h1>
         </NeuLogo>
-        <div>
-          <NeuNav inset={pathname === '/'} to="/">
-            HOME
+        <div style={{ display: 'flex' }}>
+          <NeuNav inset={pathname === '/'}>
+            <Link to="/">HOME</Link>
           </NeuNav>
-
-          <NeuNav inset={pathname === '/about'} to="/about">
-            ABOUT
+          <NeuNav inset={pathname === '/about'}>
+            <Link to="/about"> ABOUT</Link>
           </NeuNav>
-          <NeuNav inset={pathname === '/contact'} to="/contact">
-            CONTACT
+          <NeuNav inset={pathname === '/contact'}>
+            <Link to="/contact"> CONTACT</Link>
           </NeuNav>
         </div>
       </div>
