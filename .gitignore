@@ -1,48 +1,34 @@
-# macOS
-### https://raw.github.com/github/gitignore/07c730e1fccfe0f92b29e039ba149d20bfb332e7/Global/macOS.gitignore
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# node.js
-### https://raw.github.com/github/gitignore/07c730e1fccfe0f92b29e039ba149d20bfb332e7/Node.gitignore
-logs
-*.log
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pids
-*.pid
-*.seed
-*.pid.lock
-lib-cov
-coverage
-.nyc_output
-.grunt
-bower_components
-.lock-wscript
-build/Release
-node_modules/
-jspm_packages/
-typings/
-.npm
-.eslintcache
-.node_repl_history
-*.tgz
-.yarn-integrity
-.env
-.next
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel

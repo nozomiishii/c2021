@@ -1,9 +1,3 @@
-nozomi ishii
+# nozomiishii webpage for 2021 
 
-my website for 2021.
-
-How to Start
-
-```shell
-npm start
-```
+![Neon 2021](https://media.giphy.com/media/Cn44PUsTVimwBAtIRx/giphy.gif)
