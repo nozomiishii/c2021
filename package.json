@@ -15,9 +15,11 @@
   "dependencies": {
     "autoprefixer": "^10.1.0",
     "next": "10.0.4",
+    "notion-api-worker": "^0.1.0",
     "postcss": "^8.2.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-notion": "^0.9.3",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {

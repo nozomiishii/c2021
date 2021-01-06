@@ -11,6 +11,13 @@ export interface Time {
  * https://qiita.com/kodama321/items/834f5fb721b533b73fa9
  */
 export const countDown = (endTime: string): Time => {
+  const regex = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
+
+  if (!regex.test(endTime)) {
+    console.warn('invalid endTime format');
+    return;
+  }
+
   const now = new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
   const end = new Date(endTime).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
 

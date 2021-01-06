@@ -23,8 +23,8 @@
     "eslint-config-prettier/@typescript-eslint"
   ],
   "rules": {
-    "strict": ["error", "never"],
     "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off"
   }
