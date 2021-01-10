@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const Home: React.FC = () => {
-  const endTime = '2021-01-11';
+  const endTime = '2021-01-11 23:11:11';
   const [count, setCount] = useState<Time>();
 
   useEffect(() => {
