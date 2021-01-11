@@ -18,8 +18,8 @@ export const countDown = (endTime: string): Time => {
     return;
   }
 
-  const now = new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
-  const end = new Date(endTime).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+  const now = new Date().toISOString();
+  const end = new Date(endTime).toISOString();
 
   const total = (Date.parse(end) - Date.parse(now)) / 1000; // convert 1000ms to 1s
   const days = Math.floor(total / (60 * 60 * 24));
