@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { countDown, Time } from 'src/components';
+import { countDown, Time } from '.';
 
 export const CountDown: React.FC = () => {
   const endTime = '2021-01-11 23:11:11';
