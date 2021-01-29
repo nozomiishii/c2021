@@ -10,7 +10,7 @@ interface HeaderItem {
 }
 
 const headerItems: HeaderItem[] = [
-  // { name: 'about', slug: '/about' },
+  { name: 'about', slug: '/about' },
   // { name: 'art', slug: '/art' },
   { name: 'blog', slug: '/blog' },
   // { name: 'contact', slug: '/contact' },
