@@ -1,5 +1,21 @@
+import Head from 'next/head';
 import React from 'react';
+import { Footer, Navbar } from '.';
 
-export const Layout: React.FC = () => {
-  return <div>Layout</div>;
+interface P {
+  title?: string;
+}
+
+export const Layout: React.FC<P> = ({ title = 'NOZOMI ISHII', children }) => {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <div className="pt-14">{children}</div>
+      <Footer />
+    </>
+  );
 };

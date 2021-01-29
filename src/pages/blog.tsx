@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Head from 'next/head';
-import { Navbar } from 'src/components';
+import { Layout } from 'src/components';
 
 interface Thumbnail {
   name: string;
@@ -41,12 +40,7 @@ interface P {
 }
 
 const Blog: React.FC<P> = ({ posts }) => (
-  <>
-    <Head>
-      <title>NOZOMI ISHII</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Navbar />
+  <Layout title="BLOG | NOZOMI ISHII">
     <div>
       <h1 className="text-4xl">Posts</h1>
     </div>
@@ -64,7 +58,7 @@ const Blog: React.FC<P> = ({ posts }) => (
         );
       })}
     </div>
-  </>
+  </Layout>
 );
 
 export default Blog;
