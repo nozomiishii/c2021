@@ -4,23 +4,31 @@ import { useState } from 'react';
 type HeaderName = 'about' | 'blog' | 'art' | 'contact';
 type HeaderSlug = '/' | '/about' | '/blog' | '/art' | '/contact';
 
-interface HeaderItem {
+interface NavbarItem {
   name: HeaderName;
   slug: HeaderSlug;
 }
 
-const headerItems: HeaderItem[] = [
+const navbarItems: NavbarItem[] = [
   { name: 'about', slug: '/about' },
   // { name: 'art', slug: '/art' },
   { name: 'blog', slug: '/blog' },
   // { name: 'contact', slug: '/contact' },
 ];
 
-export const Navbar: React.FC = () => {
+export const NavbarBgBlack: React.FC = () => {
   const [open, setOpen] = useState(false);
 
+  const Menu = navbarItems.map(({ name, slug }) => (
+    <Link href={slug} key={name}>
+      <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter text-white hover:text-green-400 mr-4">
+        {name}
+      </a>
+    </Link>
+  ));
+
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-red-400 p-4 fixed w-full">
+    <nav className="flex items-center justify-between flex-wrap p-4 fixed w-full">
       {/* logo */}
       <div className="text-white mr-6">
         <Link href="/">
@@ -32,7 +40,7 @@ export const Navbar: React.FC = () => {
       <div className="block lg:hidden">
         <button
           className="flex items-center px-2 py-1 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white"
-          onClick={() => setOpen(state => !state)}
+          onClick={() => setOpen((state) => !state)}
         >
           🦸🏻‍♂️
         </button>
@@ -40,24 +48,12 @@ export const Navbar: React.FC = () => {
 
       {/* Navbar Items */}
       <div className="hidden w-full text-sm lg:flex lg:flex-row lg:items-center lg:w-auto">
-        {headerItems.map(({ name, slug }) => (
-          <Link href={slug} key={name}>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-              {name}
-            </a>
-          </Link>
-        ))}
+        {Menu}
       </div>
       {/* for mobile TODO: 上と共通化する*/}
       {open && (
         <div className="w-full text-sm flex flex-col items-end lg:flex-row lg:items-center lg:w-auto">
-          {headerItems.map(({ name, slug }) => (
-            <Link href={slug} key={name}>
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-                {name}
-              </a>
-            </Link>
-          ))}
+          {Menu}
         </div>
       )}
     </nav>
