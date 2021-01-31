@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
 
   const Menu = navbarItems.map(({ name, slug }) => (
     <Link href={slug} key={name}>
-      <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter text-gray-800 hover:text-green-400 mr-4">
+      <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter text-gray-800 hover:text-green-700 mr-4">
         {name}
       </a>
     </Link>
@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
       {/* toggle button for mobile */}
       <div className="block lg:hidden">
         <button
-          className="flex justify-center items-center w-8 h-8 border rounded-full border-gray-800 hover:text-green-400 hover:border-green-400"
+          className="flex justify-center items-center w-8 h-8 border rounded-full border-gray-800 hover:text-green-700 hover:border-green-700"
           onClick={() => setOpen((state) => !state)}
         >
           🦸🏻‍♂️
