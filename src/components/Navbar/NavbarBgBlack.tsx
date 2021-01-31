@@ -28,7 +28,7 @@ export const NavbarBgBlack: React.FC = () => {
   ));
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-4 fixed w-full">
+    <nav className="flex py-2 px-4 items-center justify-between flex-wrap lg:p-4 fixed w-full">
       {/* logo */}
       <div className="text-white mr-6">
         <Link href="/">
@@ -39,7 +39,7 @@ export const NavbarBgBlack: React.FC = () => {
       {/* toggle button for mobile */}
       <div className="block lg:hidden">
         <button
-          className="flex items-center px-2 py-1 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white"
+          className="flex justify-center items-center w-8 h-8 border rounded-full border-teal-light hover:text-green-400 hover:border-green-400"
           onClick={() => setOpen((state) => !state)}
         >
           🦸🏻‍♂️
