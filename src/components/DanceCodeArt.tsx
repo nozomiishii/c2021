@@ -1,6 +1,7 @@
 import React from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import {
+  DoubleSide,
   // Clock,
   FontLoader,
   Mesh,
@@ -69,7 +70,7 @@ const DanceCodeArt: React.FC = () => {
         };
         const geometry = new TextGeometry(text, parameters);
         geometry.center();
-        const material = new MeshNormalMaterial();
+        const material = new MeshNormalMaterial({ side: DoubleSide });
         const mesh = new Mesh(geometry, material);
         mesh.position.y = position;
 
