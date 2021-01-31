@@ -34,7 +34,7 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({ post, blocks
           >
             {tags}
           </p>
-          <h1 className="text-4xl capitalize mt-2 mb-8">{title}</h1>
+          <h1 className="text-4xl uppercase mt-2 mb-8">{title}</h1>
 
           <NotionRenderer blockMap={blocks} />
         </div>
