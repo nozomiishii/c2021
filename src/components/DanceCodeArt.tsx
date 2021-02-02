@@ -2,7 +2,7 @@ import React from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import {
   DoubleSide,
-  // Clock,
+  Clock,
   FontLoader,
   Mesh,
   MeshNormalMaterial,
@@ -10,8 +10,9 @@ import {
   Scene,
   TextGeometry,
   WebGLRenderer,
+  Group,
 } from 'three';
-// import * as dat from 'dat.gui'
+// import * as dat from 'dat.gui';
 // const gui = new dat.GUI();
 
 const DanceCodeArt: React.FC = () => {
@@ -40,6 +41,7 @@ const DanceCodeArt: React.FC = () => {
     });
 
     const fontLoader = new FontLoader();
+    const group = new Group();
     fontLoader.load('fonts/helvetiker_regular.typeface.json', (font) => {
       const texts = [
         {
@@ -72,16 +74,18 @@ const DanceCodeArt: React.FC = () => {
         geometry.center();
         const material = new MeshNormalMaterial({ side: DoubleSide });
         const mesh = new Mesh(geometry, material);
+        // Make a line for letters
         mesh.position.y = position;
-
-        scene.add(mesh);
+        group.add(mesh);
       });
     });
+    scene.add(group);
 
     const camera = new PerspectiveCamera(75, width / height, 0.1, 100);
+
     camera.position.x = 0;
-    camera.position.y = -0.25;
-    camera.position.z = 0.38;
+    camera.position.y = -0.22;
+    camera.position.z = 0.28;
     scene.add(camera);
     // gui.add(camera.position, 'x').min(-1).max(1).step(0.01);
     // gui.add(camera.position, 'y').min(-1).max(1).step(0.01);
@@ -95,9 +99,11 @@ const DanceCodeArt: React.FC = () => {
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // const clock = new Clock();
+    const clock = new Clock();
     const tick = () => {
-      // const elapsedTime = clock.getElapsedTime();
+      const elapsedTime = clock.getElapsedTime();
+      group.rotation.x = Math.sin(elapsedTime * 0.01);
+      group.rotation.y = Math.sin(elapsedTime * -0.01);
 
       // Update controls
       controls.update();
