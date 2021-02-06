@@ -2,9 +2,9 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { NavbarBgBlack } from 'src/components/Navbar/NavbarBgBlack';
+import { Loading } from 'src/components';
 
-const Loading = () => <p>Loading ...</p>;
-const DanceCodeArt = dynamic(() => import('../components/DanceCodeArt'), {
+const DanceCodeArt = dynamic(() => import('../art/DanceCodeArt'), {
   loading: Loading,
   ssr: false,
 });
@@ -22,4 +22,15 @@ const Home: React.FC = () => (
     </footer>
   </>
 );
+
+/**
+ *  Testing or creative activity
+ */
+// const Home: React.FC = () => {
+//   return (
+//     <div>
+//       <HomePage />
+//     </div>
+//   );
+// };
 export default Home;
