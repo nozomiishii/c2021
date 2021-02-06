@@ -15,6 +15,9 @@ import {
 // import * as dat from 'dat.gui';
 // const gui = new dat.GUI();
 
+/**
+ *  I like it too much to get into it. - 好きすぎてのめり込んでる
+ */
 const DanceCodeArt: React.FC = () => {
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
     if (!canvas) {
@@ -83,13 +86,10 @@ const DanceCodeArt: React.FC = () => {
 
     const camera = new PerspectiveCamera(75, width / height, 0.1, 100);
 
-    camera.position.x = 0;
-    camera.position.y = -0.22;
-    camera.position.z = 0.28;
+    camera.position.x = 0.01;
+    camera.position.y = 0.01;
+    camera.position.z = 0.01;
     scene.add(camera);
-    // gui.add(camera.position, 'x').min(-1).max(1).step(0.01);
-    // gui.add(camera.position, 'y').min(-1).max(1).step(0.01);
-    // gui.add(camera.position, 'z').min(-1).max(1).step(0.01);
 
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
@@ -102,8 +102,8 @@ const DanceCodeArt: React.FC = () => {
     const clock = new Clock();
     const tick = () => {
       const elapsedTime = clock.getElapsedTime();
-      group.rotation.x = Math.sin(elapsedTime * 0.01);
-      group.rotation.y = Math.sin(elapsedTime * -0.01);
+      group.rotation.x = Math.sin(elapsedTime * 0.03);
+      group.rotation.y = Math.sin(elapsedTime * -0.03);
 
       // Update controls
       controls.update();
