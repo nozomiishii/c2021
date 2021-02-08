@@ -23,6 +23,7 @@ export type Post = {
   images: NotionImage[];
   description: string;
   thumbnail?: Thumbnail[];
+  hidden?: boolean;
 };
 
 export const getAllPosts = async (): Promise<Post[]> => {
@@ -37,7 +38,10 @@ export const getAllPosts = async (): Promise<Post[]> => {
 
 export async function getStaticProps() {
   const data = await getAllPosts();
-  const posts = data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+  // desc
+  const posts = data
+    .filter(({ hidden }) => !hidden)
+    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
   return {
     props: {
       posts,
