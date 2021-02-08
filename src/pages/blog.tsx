@@ -55,7 +55,7 @@ const Blog: React.FC<P> = ({ posts }) => (
       <h1 className="m-4 text-4xl">Blog</h1>
     </div>
     <div className="flex flex-wrap">
-      {posts.map(({ date, id, description, slug, tags, title, images }) => {
+      {posts.map(({ date, id, description, slug, tags, images }) => {
         return (
           <div key={id} className="m-4 rounded">
             <Link href="/blog/[slug]" as={`/blog/${slug}`}>

@@ -18,7 +18,7 @@ import {
 /**
  *  I like it too much to get into it. - 好きすぎてのめり込んでる
  */
-const DanceCodeArt: React.FC = () => {
+export const DanceCodeArt: React.FC = () => {
   const onCanvasLoaded = (canvas: HTMLCanvasElement) => {
     if (!canvas) {
       return;
@@ -119,5 +119,3 @@ const DanceCodeArt: React.FC = () => {
   };
   return <canvas ref={onCanvasLoaded} />;
 };
-
-export default DanceCodeArt;
