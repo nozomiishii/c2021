@@ -43,7 +43,10 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://nozomiishii.jp" />
           <meta name="twitter:title" content="NOZOMI ISHII" />
-          <meta name="twitter:description" content="Dance + Code + Art" />
+          <meta
+            name="twitter:description"
+            content="Dance + Code + Art | Front-end engineer who loves dancing and 3D art."
+          />
           <meta
             name="twitter:image"
             content="https://nozomiishii.jp/static/icons/android-chrome-192x192.png"
@@ -51,7 +54,10 @@ class MyDocument extends Document {
           <meta name="twitter:creator" content="@nozomiishii_jp" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="NOZOMI ISHII" />
-          <meta property="og:description" content="Dance + Code + Art" />
+          <meta
+            property="og:description"
+            content="Dance + Code + Art | Front-end engineer who loves dancing and 3D art."
+          />
           <meta property="og:site_name" content="NOZOMI ISHII" />
           <meta property="og:url" content="https://nozomiishii.jp" />
           <meta
