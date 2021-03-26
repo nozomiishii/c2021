@@ -1,12 +1,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
-
-type HeaderName = 'about' | 'blog' | 'art' | 'contact';
-type HeaderSlug = '/' | '/about' | '/blog' | '/art' | '/contact';
-
 interface NavbarItem {
-  name: HeaderName;
-  slug: HeaderSlug;
+  name: 'about' | 'blog' | 'art' | 'contact';
+  slug: '/' | '/about' | '/blog' | '/art' | '/contact';
 }
 
 const navbarItems: NavbarItem[] = [
