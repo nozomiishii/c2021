@@ -5,6 +5,7 @@ module.exports = withPWA({
     domains: ['www.notion.so'],
   },
   pwa: {
+    disable: process.env.NODE_ENV === 'development',
     dest: 'public',
   },
 });
