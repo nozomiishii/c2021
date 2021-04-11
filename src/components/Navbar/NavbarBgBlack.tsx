@@ -12,7 +12,7 @@ interface NavbarItem {
 const navbarItems: NavbarItem[] = [
   { name: 'about', slug: '/about' },
   // { name: 'art', slug: '/art' },
-  { name: 'blog', slug: '/blog' },
+  // { name: 'blog', slug: '/blog' },
   // { name: 'contact', slug: '/contact' },
 ];
 
@@ -21,25 +21,25 @@ export const NavbarBgBlack: React.FC = () => {
 
   const Menu = navbarItems.map(({ name, slug }) => (
     <Link href={slug} key={name}>
-      <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter text-white hover:text-green-700 mr-4">
+      <a className="text-teal-lighter block mr-4 mt-4 hover:text-green-700 text-white lg:inline-block lg:mt-0">
         {name}
       </a>
     </Link>
   ));
 
   return (
-    <nav className="flex py-2 px-4 items-center justify-between flex-wrap lg:p-4 fixed w-full">
+    <nav className="fixed flex flex-wrap items-center justify-between px-4 py-2 w-full lg:p-4">
       {/* logo */}
-      <div className="text-white mr-6">
+      <div className="mr-6 text-white">
         <Link href="/">
-          <a className="font-semibold text-xl tracking-tight">NOZOMI ISHII</a>
+          <a className="text-xl font-semibold tracking-tight">NOZOMI ISHII</a>
         </Link>
       </div>
 
       {/* toggle button for mobile */}
       <div className="block lg:hidden">
         <button
-          className="flex justify-center items-center w-8 h-8 border rounded-full border-teal-light hover:text-green-700 hover:border-green-700"
+          className="border-teal-light flex items-center justify-center w-8 h-8 hover:text-green-700 border hover:border-green-700 rounded-full"
           onClick={() => setOpen((state) => !state)}
         >
           🦸🏻‍♂️
@@ -52,7 +52,7 @@ export const NavbarBgBlack: React.FC = () => {
       </div>
       {/* for mobile TODO: 上と共通化する*/}
       {open && (
-        <div className="w-full text-sm flex flex-col items-end lg:flex-row lg:items-center lg:w-auto">
+        <div className="flex flex-col items-end w-full text-sm lg:flex-row lg:items-center lg:w-auto">
           {Menu}
         </div>
       )}

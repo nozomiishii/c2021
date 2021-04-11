@@ -19,7 +19,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {
             initial={{ opacity: 0.5 }}
             animate={{ opacity: 1 }}
             exit={{ x: '-100vw', transition: { ease: 'easeInOut', duration: 0.3 } }}
-            className="bg-white"
+            className="bg-gray-100"
           >
             <Component {...pageProps} />
           </motion.div>
