@@ -36,3 +36,7 @@ yarn-error.log*
 # ServiceWorker
 /public/*.js
 /public/*.map
+
+#Cypress
+cypress/videos
+cypress/screenshots
