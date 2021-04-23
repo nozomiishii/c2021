@@ -40,3 +40,4 @@ yarn-error.log*
 #Cypress
 cypress/videos
 cypress/screenshots
+cypress/e2e/examples
