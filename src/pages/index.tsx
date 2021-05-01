@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { Loading, Navbar } from 'src/components';
+import { Loading, Header } from 'src/components';
 
 const DanceCodeArt = dynamic(() => import('../art/DanceCodeArt'), {
   loading: Loading,
@@ -14,7 +14,7 @@ const Home: React.FC = () => (
       <title>NOZOMI ISHII = Dance + Code + Art</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Navbar isFullScreen={true} />
+    <Header isFullScreen={true} />
     <DanceCodeArt />
     <footer className="absolute bottom-0 right-0 flex justify-end p-4 text-white">
       <p>©2020 NOZOMI ISHII</p>

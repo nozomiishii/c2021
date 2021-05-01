@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Loading, Navbar } from 'src/components';
+import { Loading, Header } from 'src/components';
 import dynamic from 'next/dynamic';
 import React from 'react';
 
@@ -15,7 +15,7 @@ const Custom404: React.FC = () => {
         <title>Page not found | NOZOMI ISHII</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar isFullScreen />
+      <Header isFullScreen />
       <ColorBeam />
       <footer className="absolute bottom-0 right-0 flex justify-end p-4 text-white">
         <p className="select-none">©2020 NOZOMI ISHII</p>

@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
-interface NavbarItem {
+interface HeaderItem {
   name: 'about' | 'blog' | 'art' | 'contact';
   slug: '/' | '/about' | '/blog' | '/art' | '/contact';
 }
 
-const navbarItems: NavbarItem[] = [
+const headerItems: HeaderItem[] = [
   { name: 'about', slug: '/about' },
   // { name: 'art', slug: '/art' },
   // { name: 'blog', slug: '/blog' },
@@ -17,7 +17,7 @@ interface P {
   isFullScreen?: boolean;
 }
 
-export const Navbar: React.FC<P> = ({ isFullScreen = false }) => {
+export const Header: React.FC<P> = ({ isFullScreen = false }) => {
   const [open, setOpen] = useState(false);
 
   const logoColorClass = classNames('mr-6', {
@@ -41,7 +41,7 @@ export const Navbar: React.FC<P> = ({ isFullScreen = false }) => {
     },
   );
 
-  const Menu = navbarItems.map(({ name, slug }) => (
+  const Menu = headerItems.map(({ name, slug }) => (
     <Link href={slug} key={name}>
       <a className={linkClass}>{name}</a>
     </Link>

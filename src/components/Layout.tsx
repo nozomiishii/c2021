@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import { Navbar } from '.';
+import { Header } from '.';
 
 interface P {
   title?: string;
@@ -13,7 +13,7 @@ export const Layout: React.FC<P> = ({ title = 'NOZOMI ISHII', children }) => {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <Header />
       <div className="pt-14">{children}</div>
       {/* <Footer /> */}
     </>
