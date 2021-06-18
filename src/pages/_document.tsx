@@ -17,11 +17,10 @@ class MyDocument extends Document {
             name="description"
             content="Dance + Code + Art | Front-end engineer who loves dancing and 3D art."
           />
-          <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/icon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/icon-16x16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/icon-32x32.png" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="format-detection" content="telephone=no" />
 
           {/* windows config */}
           <meta name="msapplication-square70x70logo" content="/static/site-tile-70x70.png" />
@@ -32,13 +31,14 @@ class MyDocument extends Document {
           <meta name="msapplication-tap-highlight" content="no" />
 
           {/* safari config */}
+          <meta name="format-detection" content="telephone=no" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="NOZOMI ISHII" />
           <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png" />
           <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#fff" />
 
-          {/* SNS */}
+          {/* Twitter */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://nozomiishii.jp" />
           <meta name="twitter:title" content="NOZOMI ISHII" />
@@ -51,6 +51,8 @@ class MyDocument extends Document {
             content="https://nozomiishii.jp/static/icons/android-chrome-192x192.png"
           />
           <meta name="twitter:creator" content="@nozomiishii_jp" />
+
+          {/* SNS */}
           <meta property="og:type" content="website" />
           <meta property="og:title" content="NOZOMI ISHII" />
           <meta
